@@ -1,0 +1,12 @@
+version: '3'
+
+
+services:
+  coures_fetcher:
+    ports:
+      - "10000:10000"
+    build:
+        context: .
+        dockerfile: Dockerfile
+    command: go run /app/cmd/main.go
+    restart: unless-stopped

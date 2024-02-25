@@ -1,0 +1,17 @@
+database:
+  type: "POSTGRE"
+  host: ""
+  port: ""
+  user: ""
+  password: ""
+  name: ""
+  sslMode: ""
+
+service:
+  name: "Currency_fetcher"
+  host: "localhost"
+  port: "10000"
+  timeout: 15
+
+allcurrenciesurl: "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies.json"
+url: "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/%s.json"
