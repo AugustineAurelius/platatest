@@ -23,7 +23,7 @@ JSON:
 Пример:
 curl -d '{"name": "EUR/JPY"}' -H "Content-Type: application/json" -X POST http://localhost:10000/currency/create
 
-Возвращaет JSON, содержащий уникальный id по которому можно запросить курс добавленной пары.
+Возвращaет JSON, содержащий уникальный id, по которому можно запросить курс добавленной пары.
 HTTP status 201.
 
 JSON:
@@ -31,9 +31,9 @@ JSON:
     "id": 30
 }
 
-Если попытаться добавить валютную пару которая уже отслеживается вернется id уже созданой пары.
+Если попытаться добавить валютную пару, которая уже отслеживается, вернется id созданой пары.
 
-2. GET запрос на получение значение цены валютной пары по уникальному id полученному в 1 или по названию пары.
+2. GET запрос на получение значение цены валютной пары по уникальному id, полученному при создании или по названию пары.
 GET curl -X GET http://host:port/currency/id/{id}
 GET curl -X GET http://host:port/currency/code/{currency pair}
 
@@ -41,7 +41,7 @@ GET curl -X GET http://host:port/currency/code/{currency pair}
 curl -X GET http://localhost:10000/currency/id/12
 curl -X GET http://localhost:10000/currency/code/EUR/JPY
 
-Возвращает цену и время последгного обновления.
+Возвращает цену и время последнего обновления.
 
 JSON:
 {
@@ -55,7 +55,7 @@ GET POST http://host:port/health
 Пример:
 curl -X GET http://localhost:10000/health
 
-Возвращает JSON содержащий bool переменную.
+Возвращает JSON, содержащий bool переменную.
 
 JSON:
 {
